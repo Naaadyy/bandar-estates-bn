@@ -1,5 +1,6 @@
-'use client'
+'use client'; // Ensure this is at the top for client-side rendering
 import React, { useState } from "react";
+import { useRouter } from 'next/navigation'; // Import useRouter
 import Footer from "../RootComponents/Footer";
 import "./page.css";
 
@@ -15,6 +16,9 @@ const ContactPage = () => {
   // State to manage popup visibility
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
+  // useRouter hook for navigation
+  const router = useRouter();
+
   // Handler for form input changes
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -27,9 +31,10 @@ const ContactPage = () => {
     setIsPopupVisible(true);
   };
 
-  // Handler to close the popup
+  // Handler to close the popup and navigate to the homepage
   const closePopup = () => {
     setIsPopupVisible(false);
+    router.push('/'); // Navigate to the homepage
   };
 
   return (
@@ -157,7 +162,7 @@ const ContactPage = () => {
               Close
             </button>
           </div>
-          <div className="fixed inset-0 bg-black opacity-50" onClick={closePopup}></div>
+          <div className="fixed inset-0 bg-black opacity-5" onClick={closePopup}></div>
         </div>
       )}
 
