@@ -25,6 +25,10 @@
   color: white;
 }
   
+.bg-dark-gray {
+  background-color: rgba(33, 37, 41, 0.75); /* Dark grey with 75% opacity */
+}
+
   .bg-black {
     background-color: #000;
   }
@@ -104,4 +108,19 @@
   img {
     max-width: 100%;
   }
+
+  /* Center the text overlay within the container */
+.absolute {
+  position: absolute;
+}
+
+/* Vertically center the text */
+.inset-0 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
   

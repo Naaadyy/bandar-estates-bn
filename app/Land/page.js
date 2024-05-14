@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Footer from '../RootComponents/Footer';
+import Link from 'next/link';
 import './landpage.css';
 
 // Define your images
@@ -26,6 +27,7 @@ const LandPage = () => {
 
       {/* Second Section */}
       <section className="section bg-white text-black">
+      <br />
         <div className="container flex flex-wrap md:flex-nowrap">
           <div className="flex-1 p-5">
             <img src={secondimg} alt="Second Section Image" className="w-[432px] h-[365px] rounded-lg object-cover" />
@@ -33,18 +35,21 @@ const LandPage = () => {
           <div className="flex-1 p-5">
             <h2 className="text-4xl font-bold mb-4">Land to Sell?</h2>
             <p className="mb-4">Another subheading—maybe it’s related to the image on the left, or the button below </p>
-            <button className="btn">Find Out More</button>
+            <button className="btn">
+              <Link href="/LandForm">Find Out More</Link>
+            </button>
           </div>
         </div>
+        <br />
       </section>
 
       {/* Third Section */}
       <section className="section text-center relative">
         <div className="container relative">
-          <img src={bannerimg} alt="Banner Image" className="w-full" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <h2 className="text-4xl font-bold mb-4">Title</h2>
-            <p className="mb-4">Test Test Test</p>
+          <img src={bannerimg} alt="Banner Image" className="w-full object-cover" />
+          <div className="h-[150px] w-[1050px] absolute inset-0 flex flex-col items-center justify-center text-white bg-dark-gray bg-opacity-75 p-5">
+            <h2 className="text-4xl font-bold mb-4">Land Area Name Here - Consultation</h2>
+            <p className="mb-4">Welcome to our website which provides information on Cala Homes’ proposals for Land North of Oakley Lane, Merley.</p>
           </div>
         </div>
       </section>
@@ -52,23 +57,37 @@ const LandPage = () => {
       {/* Fourth Section */}
       <section className="section bg-white text-black flex items-center justify-center">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-4">Fourth Section</h2>
-          <p className="mb-4">This is the fourth section with some content.</p>
+          <br />
+          <br />
+          <h2 className="text-4xl font-bold mb-4">Proposals for new homes on [Land Area Name]</h2>
+          <br />
+          <br />
+          <p className="mb-4">Bandar Estates is bringing forward proposals for a beautiful development of new homes on land to [District Name].
+            In response to local housing need and the allocation of the site in the Local Plan, the plans include x number of homes -  four-bedroom homes for families, downsizers, and couples.
+            This website gives you the opportunity to view the proposals and provide your comments, which will help shape the proposals before a planning application is submitted to Town and Country Planning Department, Brunei.
+
+            On [Date], Bandar Estates held a virtual exhibition where local people could learn about the plans, ask questions to the project team and provide their feedback. 
+
+            You can access the exhibition boards by clicking the button below.</p>
           <button className="btn">Download PDF</button>
+          <hr className="w-auto mx-auto my-6 border-gray-400" />
         </div>
       </section>
-
-      <hr className="bg-white my-10 border-t-2 border-gray-300" />
 
       {/* Fifth Section */}
       <section className="section bg-white text-black flex items-center justify-center">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-4">Fifth Section</h2>
-          <p className="mb-4">This is the fifth section with some content.</p>
-          <button className="btn">Get in Touch</button>
+          <h2 className="text-4xl font-bold mb-4">Contact Bandar Estates</h2>
+          <p className="mb-4">Our regional teams are looking to buy land for development on a conditional, unconditional or option basis.</p>
+          <button className="btn">
+            <Link href="/LandForm">Get in Touch</Link>
+          </button>
+          <br />
+          <br />
+          <br />
         </div>
       </section>
-
+      
       <Footer />
     </div>
   );
