@@ -43,7 +43,7 @@ const ContactPage = () => {
         {/* Row Container */}
         <div className="flex flex-wrap md:flex-nowrap gap-4">
           {/* General Questions Section */}
-          <div className="flex-1">
+          <div className="flex-1 w-full ">
             <h1 className="text-4xl font-bold text-yellow-400 mb-4">Contact Us</h1>
             <h3 className="text-2xl font-bold mb-4 text-white">General Questions</h3>
             <form className="bg-white p-6 rounded-lg shadow-md" onSubmit={handleSubmit}>
@@ -116,7 +116,7 @@ const ContactPage = () => {
           <div className="hidden md:block mx-10 h-auto border-l border-white"></div>
 
           {/* Why Bandar Estates Section */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <h2 className="text-4xl font-bold mb-4 text-white">Why Bandar</h2>
             <h2 className="text-4xl font-bold mb-4 text-white -mt-5">Estates?</h2>
             <div className="p-6 rounded-lg shadow-md">
