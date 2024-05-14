@@ -17,7 +17,7 @@ export default function HeaderNavBar() {
       </div>
       
       <div className="flex space-x-20"> {/* Container for other links */}
-      <Link href="/About" className="ml-4">About Bandar Estates</Link>
+        <Link href='/About' className="ml-4">About Bandar Estates</Link>
         <Link href='/Developments'>Developments</Link>
         <Link href='/Land'>Land & Planning</Link>
         <Link href='/Contact'>Contact Us</Link>

@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Footer from '../RootComponents/Footer';
+import Footer from '../../RootComponents/Footer';
 
-export default function DevelopmentsPage() {
+export default function ListPage() {
   const [activeLink, setActiveLink] = useState(null);
 
   const handleClick = (link) => {
@@ -40,22 +40,28 @@ export default function DevelopmentsPage() {
           <h2 className="text-2xl font-bold pb-3">Brunei-Muara Developments</h2>
           <p>
             <Link href='/Developments/ListView'
-              className={`link text-black font-bold cursor-pointer hover:text-yellow-400 ${activeLink === 'list' ? 'text-yellow-500' : ''}`}
-              onClick={() => handleClick('list')}
-            >List View
+              
+                className={`link text-black font-bold cursor-pointer hover:text-yellow-400 ${activeLink === 'list' ? 'text-yellow-500' : ''}`}
+                onClick={() => handleClick('list')}
+              >
+                List View
+              
             </Link>
 
             {' / '}
             
-            <Link href='/Developments'
-              className={`link text-black font-bold cursor-pointer hover:text-yellow-400 ${activeLink === 'map' ? 'text-yellow-500' : ''}`}
-              onClick={() => handleClick('map')}
-            >Map View
+            <Link href='/Developments/MapView'
+              
+                className={`link text-black font-bold cursor-pointer hover:text-yellow-400 ${activeLink === 'map' ? 'text-yellow-500' : ''}`}
+                onClick={() => handleClick('map')}
+              >
+                Map View
+              
             </Link>
           </p>
-
         </div>
       </div>
+
       <Footer />
     </>
   );
