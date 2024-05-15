@@ -36,7 +36,7 @@ const Footer = () => {
                 height={50}
               />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.instagram.com/bandarestates.bn/" target="_blank" rel="noopener noreferrer" className="social-link">
               <Image
                 src="/images/Instagram.png"
                 alt="Instagram"
