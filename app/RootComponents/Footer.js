@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 py-10 px-4">
+    <footer className="bg-black text-gray-300 py-2 px-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Logo */}
         <div className="footer-left mb-6 md:mb-0">
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
 
       {/* Horizontal Line */}
-      <hr className="w-auto mx-auto my-6 border-gray-400" />
+      <hr className="w-auto mx-auto my-2 border-gray-400" />
 
       {/* Copyright Text */}
       <p className="text-sm text-gray-400 text-center">&copy; 2024 Bandar Estates BN. All rights reserved.</p>
