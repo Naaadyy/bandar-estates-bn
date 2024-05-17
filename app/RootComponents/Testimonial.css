@@ -1,0 +1,12 @@
+.testimonial-section {
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+  .testimonial-box {
+    width: 100%; /* Each box takes full width of the slider */
+    max-width: 300px; /* Adjust max-width as needed */
+    padding: 20px;
+    margin: 0 auto; /* Center each box within the section */
+  }
+  
