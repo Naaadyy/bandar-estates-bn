@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from "./RootComponents/Footer";
 import PageComponents from "./RootComponents/PageComponents";
+import Testimonials from "./RootComponents/Testimonial";
 
 export default function Home() {
   return (
@@ -89,6 +90,7 @@ export default function Home() {
         <br/>
       </div>
       <PageComponents/>
+      <Testimonials />
       <Footer/>
     </div>
   );
