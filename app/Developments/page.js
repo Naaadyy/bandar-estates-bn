@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from "../RootComponents/Footer";
@@ -18,16 +18,16 @@ export default function DevelopmentsPage() {
     clickableIcons: false,
     streetViewControl: false,
   };
-  
-  const center = {
-    lat: 4.929647696732591,
-    lng: 114.93133116714998,
-  }; 
+
+  const initialCenter = {
+    lat: 4.898108037120928,
+    lng: 114.92602127444219,
+  };
 
   const [isInfoWindowOpen, setIsInfoWindowOpen] = useState(false);
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const mapRef = useRef(null);
 
-  // Array of marker objects
   const markers = [
     {
       id: 1,
@@ -43,7 +43,7 @@ export default function DevelopmentsPage() {
       }
     },
     {
-      id: 2,   
+      id: 2,
       position: { lat: 5.028190562021885, lng: 115.05067211623077 },
       info: {
         title: "Kapok",
@@ -54,7 +54,34 @@ export default function DevelopmentsPage() {
         loan: "(Starting At $3xxK Only)",
         image: "/images/Kapok-House.png"
       }
-    }
+    },
+    {
+      id: 3,
+      position: { lat: 4.919687613794812, lng: 114.84859122177869 },
+      info: {
+        title: "Jerudong",
+        description: "Detached Bungalow • Cozy Living Spaces Jerudong (Jln Mejawa) Close To Tungku-Jerudong Highway",
+        bedrooms: "4 Bedroom",
+        bathrooms: "4 Bathroom",
+        size: "Land Size 0.13-0.146 Acre",
+        loan: "Start From $2XXk",
+        image: "/images/Jerudong-House.png"
+      }
+    }, 
+    {
+      id: 4,
+      position: { lat: 4.836639546951818, lng: 114.87031521936522 },
+      info: {
+        title: "Bengkurong",
+        description: "Moodern Luxury",
+        garage: "4 Cars Garage",
+        bedrooms: "6 Bedroom",
+        bathrooms: "7 Bathroom",
+        size: "+/- 4000 Sq Ft",
+        loan: "$4xxK Only",
+        image: "/images/Bengkurong-House.png"
+      }
+    },
     // Add more markers here
   ];
 
@@ -70,6 +97,25 @@ export default function DevelopmentsPage() {
   const handleMarkerClick = (marker) => {
     setSelectedMarker(marker);
     setIsInfoWindowOpen(true);
+
+    if (mapRef.current) {
+      mapRef.current.panTo(marker.position); // Center the map on the marker's position
+      mapRef.current.setZoom(13); // Set the zoom level as desired, e.g., 14
+    }
+  };
+
+  const handleCloseInfoWindow = () => {
+    setIsInfoWindowOpen(false);
+    if (mapRef.current) {
+      mapRef.current.panTo(initialCenter); // Reset the map to the initial center
+      mapRef.current.setZoom(11); // Reset the zoom level
+    }
+  };
+
+  const handleMapClick = () => {
+    if (isInfoWindowOpen) {
+      handleCloseInfoWindow();
+    }
   };
 
   return (
@@ -77,11 +123,12 @@ export default function DevelopmentsPage() {
       {isLoaded ? (
         <GoogleMap
           mapContainerStyle={containerStyle}
-          center={center}
+          center={initialCenter}
           zoom={11}
           options={options}
-          onClick={() => setIsInfoWindowOpen(false)}
-        > 
+          onLoad={map => (mapRef.current = map)}
+          onClick={handleMapClick}
+        >
           {markers.map((marker) => (
             <MarkerF
               key={marker.id}
@@ -91,10 +138,10 @@ export default function DevelopmentsPage() {
               onClick={() => handleMarkerClick(marker)}
             />
           ))}
-          
+
           {isInfoWindowOpen && selectedMarker && (
             <InfoWindowF
-              onCloseClick={() => setIsInfoWindowOpen(false)}
+              onCloseClick={handleCloseInfoWindow}
               position={selectedMarker.position}
             >
               <div className='w-60'>
@@ -111,6 +158,9 @@ export default function DevelopmentsPage() {
                     <p>{selectedMarker.info.bathrooms}</p>
                     <p>{selectedMarker.info.size}</p>
                     <p className='font-bold p-3'>{selectedMarker.info.loan}</p>
+                    <Link href='/OverviewPage'>
+                      <a className='button'>Go to Overview</a>
+                    </Link>
                   </div>
                 </div>
               </div>

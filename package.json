@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "homepage": "https://naaadyy.github.io/bandar-estates-bn/",
+  
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
     "next": "^14.2.3",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3"
   }
