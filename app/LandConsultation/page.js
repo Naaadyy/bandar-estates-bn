@@ -2,7 +2,6 @@
 import React from 'react';
 import Footer from '../RootComponents/Footer';
 import Link from 'next/link';
-import './LandConsultation.css';
 
 // Define your images
 const bannerimg = '/images/Banner.png'; // Update with your actual image path
