@@ -6,7 +6,6 @@ import Footer from "./RootComponents/Footer";
 import PageComponents from "./RootComponents/PageComponents";
 import Testimonials from "./RootComponents/Testimonial";
 
-
 export default function Home() {
   return (
     <div className="flex-col min-h-screen">
