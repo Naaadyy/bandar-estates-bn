@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import React from 'react';
 import "./globals.css";
 import Link from "next/link";
 import HeaderNavBar from "./RootComponents/HeaderNavBar";

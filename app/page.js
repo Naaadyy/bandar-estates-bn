@@ -13,7 +13,7 @@ export default function Home() {
         <div className="container-video">
           <div className="video relative">
             <video
-              src="/videos/BandarEstatesVideo.MP4"
+              src="videos/BandarEstatesVideo.MP4"
               autoPlay
               loop
               muted
@@ -82,6 +82,8 @@ export default function Home() {
                   </div>
                 </a>
               </div>
+
+              
             </div>
           </div>
         </div>
