@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from '../public/images/BE-Logo.png';
 
 export default function HeaderNavBar() {
   return (
@@ -8,7 +9,7 @@ export default function HeaderNavBar() {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src="./images/BE-Logo.png"
+            src={Logo}
             alt="logo"
             width={110}
             height={110}
