@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Footer from "./RootComponents/Footer";
 import PageComponents from "./RootComponents/PageComponents";
 import Testimonials from "./RootComponents/Testimonial";
+import Video from "../public/videos/BandarEstatesVideo.MP4"
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <div className="container-video">
           <div className="video relative">
             <video
-              src="videos/BandarEstatesVideo.MP4"
+              src={Video}
               autoPlay
               loop
               muted
