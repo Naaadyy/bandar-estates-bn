@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function HeaderNavBar() {
   return (
-    <nav className="flex justify-between items-center bg-black h-14 text-white py-10 px-4">
-      <div className="flex items-center"> {/* Added a container div */}
+    <nav className="flex justify-between items-center bg-black bg-opacity-20 h-14 text-white py-10 px-4 fixed top-0 left-0 right-0 z-50">
+      <div className="flex items-center">
         <Link href="/">
           <Image
             src="/images/BE-Logo.png"
@@ -16,7 +16,7 @@ export default function HeaderNavBar() {
         </Link>
       </div>
       
-      <div className="flex space-x-20"> {/* Container for other links */}
+      <div className="flex space-x-20">
         <Link href='/About' className="ml-4">About Bandar Estates</Link>
         <Link href='/Developments'>Developments</Link>
         <Link href='/Land'>Land & Planning</Link>
