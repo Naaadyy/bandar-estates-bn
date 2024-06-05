@@ -8,7 +8,7 @@ export default function HeaderNavBar() {
       <div className="flex items-center"> {/* Added a container div */}
         <Link href="/">
           <Image
-            src="/images/BE-Logo.png"
+            src="./images/BE-Logo.png"
             alt="logo"
             width={110}
             height={110}
