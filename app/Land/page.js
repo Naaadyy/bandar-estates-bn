@@ -9,7 +9,7 @@ import './landpage.css';
 
 const LandPage = () => {
   return (
-    <div>
+    <div className="bg-white">
       {/* First Section */}
       <section className="section bg-black text-white">
         <div className="container flex flex-wrap md:flex-nowrap">

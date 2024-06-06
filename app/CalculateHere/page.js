@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import Footer from '../RootComponents/Footer';
+import House from '../../public/images/BE-House-01.png';
 
 export default function LearnMore() {
   const [principal, setPrincipal] = useState('');
@@ -97,7 +98,7 @@ export default function LearnMore() {
             {/* Image section */}
             <div className="content-left flex-1 mt-8 sm:mt-20 mb-8 sm:mb-0 sm:relative sm:flex-1 sm:ml-4 sm:mr-0">
               <Image
-                src="/images/BE-House-01.png"
+                src={House}
                 alt="Brunei"
                 width={500}
                 height={500}
