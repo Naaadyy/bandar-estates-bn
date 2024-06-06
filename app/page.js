@@ -5,7 +5,12 @@ import Link from 'next/link';
 import Footer from "./RootComponents/Footer";
 import PageComponents from "./RootComponents/PageComponents";
 import Testimonials from "./RootComponents/Testimonial";
-import Video from "../public/videos/BandarEstatesVideo.MP4"
+import BruneiImage from "../public/images/Brunei.png";
+import BelaitImage from "../public/images/BelaitGrey.png";
+import TemburongImage from "../public/images/TemburongGrey.png";
+import TutongImage from "../public/images/TutongGreen.png";
+import MuaraImage from "../public/images/MuaraGrey.png"
+
 
 export default function Home() {
   return (
@@ -14,7 +19,7 @@ export default function Home() {
         <div className="container-video">
           <div className="video relative">
             <video
-              src={Video}
+              src="videos/BandarEstatesVideo.MP4"
               autoPlay
               loop
               muted
@@ -46,35 +51,35 @@ export default function Home() {
                 <a href="/Home" className="block">
                   <div className="image-container relative">
                   <Image
-                      src="/images/Brunei.png"
+                      src={BruneiImage}
                       alt="Brunei"
                       width={600}
                       height={600}
                       className="absolute top-0 left-0"
                     />
                     <Image
-                      src="/images/BelaitGrey.png"
+                      src={BelaitImage}
                       alt="Belait Grey"
                       width={600}
                       height={600}
                       className="absolute top-0 left-0"
                     />
                     <Image
-                      src="/images/TutongGreen.png"
+                      src={TutongImage}
                       alt="Tutong Grey"
                       width={600}
                       height={600}
                       className="absolute top-0 left-0"
                     />
                     <Image
-                      src="/images/TemburongGrey.png"
+                      src={TemburongImage}
                       alt="Temburong Grey"
                       width={600}
                       height={600}
                       className="absolute top-0 left-0"
                     />
                     <Image
-                      src="/images/MuaraGrey.png"
+                      src={MuaraImage}
                       alt="Muara Grey"
                       width={600}
                       height={600}
