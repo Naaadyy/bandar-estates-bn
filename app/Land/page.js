@@ -6,6 +6,10 @@ import firstimg from '../../public/images/FirstSectionImg.jpeg';
 import secondimg from '../../public/images/SecondSectionImg.png';
 import './landpage.css';
 
+// Define your images
+const firstimg = '/images/FirstSectionImg.jpeg'; // Update with your actual image path
+const secondimg = '/images/SecondSectionImg.png'; // Update with your actual image path
+
 const LandPage = () => {
   return (
     <div>
