@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import Footer from '../RootComponents/Footer';
 import Link from 'next/link';
 import firstimg from '../../public/images/FirstSectionImg.jpeg';
@@ -17,7 +18,11 @@ const LandPage = () => {
             <p className="mb-4">Another subheading—maybe it’s related to the image on the right, or the button below</p>
           </div>
           <div className="flex-1 p-5">
-            <img src={firstimg} alt="First Section Image" className="w-[432px] h-[365px] rounded-lg object-cover" />
+            <Image 
+            src={firstimg} 
+            alt="First Section Image" 
+            className="w-[432px] h-[365px] rounded-lg object-cover" 
+            />
           </div>
         </div>
       </section>
@@ -27,7 +32,11 @@ const LandPage = () => {
       <br />
         <div className="container flex flex-wrap md:flex-nowrap">
           <div className="flex-1 p-5">
-            <img src={secondimg} alt="Second Section Image" className="w-[432px] h-[365px] rounded-lg object-cover" />
+            <Image 
+            src={secondimg} 
+            alt="Second Section Image" 
+            className="w-[432px] h-[365px] rounded-lg object-cover" 
+            />
           </div>
           <div className="flex-1 p-5">
             <h2 className="text-4xl font-bold mb-4">Land to Sell?</h2>

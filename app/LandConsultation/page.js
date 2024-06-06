@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import Footer from '../RootComponents/Footer';
 import Link from 'next/link';
 import bannerimg from '../../public/images/Banner.png';
@@ -10,7 +11,11 @@ const LandConsultation = () => {
       {/* Third Section */}
       <section className="section text-center relative">
         <div className="container relative">
-          <img src={bannerimg} alt="Banner Image" className="w-full object-cover" />
+          <Image 
+          src={bannerimg} 
+          alt="Banner Image" 
+          className="w-full object-cover" 
+          />
           <div className="h-[150px] w-[1050px] absolute inset-0 flex flex-col items-center justify-center text-white bg-dark-gray bg-opacity-75 p-5">
             <h2 className="text-4xl font-bold mb-4">Land Area Name Here - Consultation</h2>
             <p className="mb-4">Welcome to our website which provides information on Cala Homes’ proposals for Land North of Oakley Lane, Merley.</p>
