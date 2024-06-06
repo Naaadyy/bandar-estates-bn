@@ -26,7 +26,7 @@ export default function Home() {
         <div className="container-video">
           <div className="video relative">
            <video
-              src="/videos/BandarEstatesVideo.mp4"
+              src="/Naaadyy/bandar-estates-bn/videos/BandarEstatesVideo.mp4"
               autoPlay
               loop
               muted
