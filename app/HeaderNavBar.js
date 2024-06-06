@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// @ts-ignore
 import Logo from '../public/images/BE-Logo.png';
 
 export default function HeaderNavBar() {

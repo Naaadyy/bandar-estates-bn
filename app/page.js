@@ -1,16 +1,23 @@
 'use client';
 import React from "react";
 import Image from 'next/image';
-import Link from 'next/link';
+// @ts-ignore
+import Video from 'next-video';
 import Footer from "./RootComponents/Footer";
 import PageComponents from "./RootComponents/PageComponents";
 import Testimonials from "./RootComponents/Testimonial";
+// @ts-ignore
 import BruneiImage from "../public/images/Brunei.png";
+// @ts-ignore
 import BelaitImage from "../public/images/BelaitGrey.png";
+// @ts-ignore
 import TemburongImage from "../public/images/TemburongGrey.png";
+// @ts-ignore
 import TutongImage from "../public/images/TutongGreen.png";
+// @ts-ignore
 import MuaraImage from "../public/images/MuaraGrey.png";
-
+// @ts-ignore
+import VideoBanner from "../public/videos/BandarEstatesVideo.mp4";
 
 export default function Home() {
   return (
@@ -18,13 +25,13 @@ export default function Home() {
       <div className="flex-1">
         <div className="container-video">
           <div className="video relative">
-            <video
-              src="/videos/BandarEstatesVideo.mp4"
+            <Video
+              src={VideoBanner}
               autoPlay
               loop
               muted
               className="video-element"
-            ></video>
+            />
           </div>
         </div>
 

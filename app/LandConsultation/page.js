@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Footer from '../RootComponents/Footer';
 import Link from 'next/link';
+// @ts-ignore
 import bannerimg from '../../public/images/Banner.png';
 
 const LandConsultation = () => {

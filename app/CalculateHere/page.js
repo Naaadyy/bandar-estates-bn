@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import Footer from '../RootComponents/Footer';
+// @ts-ignore
 import House from '../../public/images/BE-House-01.png';
 
 export default function LearnMore() {

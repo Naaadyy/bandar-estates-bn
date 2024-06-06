@@ -3,7 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import Footer from '../RootComponents/Footer';
 import Link from 'next/link';
+// @ts-ignore
 import firstimg from '../../public/images/FirstSectionImg.jpeg';
+// @ts-ignore
 import secondimg from '../../public/images/SecondSectionImg.png';
 import './landpage.css';
 

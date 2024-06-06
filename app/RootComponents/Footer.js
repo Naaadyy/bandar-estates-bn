@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+// @ts-ignore
 import Logo from '../../public/images/BE-Logo.png';
+// @ts-ignore
 import Facebook from '../../public/images/Facebook.png';
+// @ts-ignore
 import Instagram from '../../public/images/Instagram.png';
 
 const Footer = () => {

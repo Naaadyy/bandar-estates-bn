@@ -126,6 +126,7 @@ export default function DevelopmentsPage() {
           center={initialCenter}
           zoom={11}
           options={options}
+          // @ts-ignore
           onLoad={map => (mapRef.current = map)}
           onClick={handleMapClick}
         >
@@ -133,6 +134,7 @@ export default function DevelopmentsPage() {
             <MarkerF
               key={marker.id}
               position={marker.position}
+              // @ts-ignore
               icon={pinIcon}
               cursor="pointer"
               onClick={() => handleMarkerClick(marker)}
