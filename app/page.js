@@ -9,7 +9,7 @@ import BruneiImage from "../public/images/Brunei.png";
 import BelaitImage from "../public/images/BelaitGrey.png";
 import TemburongImage from "../public/images/TemburongGrey.png";
 import TutongImage from "../public/images/TutongGreen.png";
-import MuaraImage from "../public/images/MuaraGrey.png"
+import MuaraImage from "../public/images/MuaraGrey.png";
 
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <div className="container-video">
           <div className="video relative">
             <video
-              src="videos/BandarEstatesVideo.MP4"
+              src={"videos/BandarEstatesVideo.MP4"}
               autoPlay
               loop
               muted

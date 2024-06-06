@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Logo from '../../public/images/BE-Logo.png';
+import Facebook from '../../public/images/Facebook.png';
+import Instagram from '../../public/images/Instagram.png';
 
 const Footer = () => {
   return (
@@ -8,7 +11,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="footer-left mb-6 md:mb-0">
           <Image
-            src="/images/BE-Logo.png"
+            src={Logo}
             alt="logo"
             width={200}
             height={200}
@@ -30,7 +33,7 @@ const Footer = () => {
           <div className="flex gap-4 py-3">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
               <Image
-                src="/images/Facebook.png"
+                src={Facebook}
                 alt="Facebook"
                 width={50}
                 height={50}
@@ -38,7 +41,7 @@ const Footer = () => {
             </a>
             <a href="https://www.instagram.com/bandarestates.bn/" target="_blank" rel="noopener noreferrer" className="social-link">
               <Image
-                src="/images/Instagram.png"
+                src={Instagram}
                 alt="Instagram"
                 width={50}
                 height={50}
