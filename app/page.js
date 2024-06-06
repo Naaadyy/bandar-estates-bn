@@ -25,13 +25,13 @@ export default function Home() {
       <div className="flex-1">
         <div className="container-video">
           <div className="video relative">
-            <Video
-              src={VideoBanner}
+           <video
+              src="/videos/BandarEstatesVideo.mp4"
               autoPlay
               loop
               muted
               className="video-element"
-            />
+            ></video>
           </div>
         </div>
 
