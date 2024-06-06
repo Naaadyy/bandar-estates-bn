@@ -2,9 +2,7 @@
 import React from 'react';
 import Footer from '../RootComponents/Footer';
 import Link from 'next/link';
-
-// Define your images
-const bannerimg = '../public/images/Banner.png'; // Update with your actual image path
+import bannerimg from '../../public/images/Banner.png';
 
 const LandConsultation = () => {
   return (
