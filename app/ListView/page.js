@@ -1,10 +1,11 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Footer from '../../RootComponents/Footer';
+import Footer from '../RootComponents/Footer';
+// @ts-ignore
+import Logo from '../../public/images/BE-House-01.png';
 
-// Card Component (defined within the same file)
 const Card = ({ title, description, imageUrl, linkUrl }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
@@ -53,7 +54,7 @@ export default function ListPage() {
         <div className="content-right flex-1 relative flex justify-center items-center">
           <div className="image-container relative">
             <Image
-              src="/images/BE-House-01.png"
+              src={Logo}
               alt="Brunei"
               width={400}
               height={400}
@@ -68,7 +69,7 @@ export default function ListPage() {
         <div className="px-10 pt-10 pb-10 text-center">
           <h2 className="text-2xl font-bold pb-3">Brunei-Muara Developments</h2>
           <p>
-            <Link href='/Developments/ListView'
+            <Link href='/ListView'
               className={`link text-black font-bold cursor-pointer hover:text-yellow-400 ${activeLink === 'list' ? 'text-yellow-500' : ''}`}
               onClick={() => handleClick('list')}
             >List View
@@ -91,20 +92,20 @@ export default function ListPage() {
           <Card 
             title="Lumapas" 
             description="2-storey Detached House" 
-            imageUrl="/images/BE-House-01.png" 
-            linkUrl="/Developments/Development1" 
+            imageUrl={Logo}
+            linkUrl="/Developments/Lumapas" // Ensure this links to your dynamic route
           />
           <Card 
             title="Development 2" 
             description="Description for Development 2" 
-            imageUrl="/images/BE-House-01.png" 
-            linkUrl="/Developments/Development2" 
+            imageUrl={Logo} 
+            linkUrl="/Developments/Development2" // Ensure this links to your dynamic route
           />
           <Card 
             title="Development 3" 
             description="Description for Development 3" 
-            imageUrl="/images/BE-House-01.png" 
-            linkUrl="/Developments/Development3" 
+            imageUrl={Logo}
+            linkUrl="/Developments/Development3" // Ensure this links to your dynamic route
           />
         </div>
       </div>

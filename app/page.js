@@ -17,7 +17,7 @@ import TutongImage from "../public/images/TutongGreen.png";
 // @ts-ignore
 import MuaraImage from "../public/images/MuaraGrey.png";
 // @ts-ignore
-import VideoBanner from "../public/videos/BandarEstatesVideo.mp4";
+// import VideoBanner from "../public/videos/BandarEstatesVideo.mp4";
 
 export default function Home() {
   return (

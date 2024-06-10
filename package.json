@@ -11,6 +11,7 @@
   "homepage": "https://naaadyy.github.io/bandar-estates-bn/",
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
+    "express": "^4.19.2",
     "next": "^14.2.3",
     "next-video": "^1.1.0",
     "react": "^18",
